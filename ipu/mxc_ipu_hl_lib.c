@@ -1726,7 +1726,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 				IPU_ROTATE_NONE,
 				buf0,
 				buf1,
-				0,
 				ipu_priv_handle->i_uoff, ipu_priv_handle->i_voff);
 		if (ret < 0) {
 			ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -1744,7 +1743,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 					IPU_ROTATE_NONE,
 					buf0_p,
 					buf1_p,
-					0,
 					ipu_priv_handle->i_uoff, ipu_priv_handle->i_voff);
 			if (ret < 0) {
 				ipu_uninit_channel(ipu_priv_handle->output.vdi_ic_p_chan);
@@ -1760,7 +1758,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 					IPU_ROTATE_NONE,
 					buf0_n,
 					buf1_n,
-					0,
 					ipu_priv_handle->i_uoff, ipu_priv_handle->i_voff);
 			if (ret < 0) {
 				ipu_uninit_channel(ipu_priv_handle->output.vdi_ic_n_chan);
@@ -1779,7 +1776,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 					ipu_priv_handle->ov_minfo[0].paddr + ipu_priv_handle->ov_off,
 					ipu_priv_handle->mode & OP_STREAM_MODE ?
 					ipu_priv_handle->ov_minfo[1].paddr + ipu_priv_handle->ov_off : 0,
-					0,
 					ipu_priv_handle->ov_uoff, ipu_priv_handle->ov_voff);
 			if (ret < 0) {
 				ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -1797,7 +1793,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 						ipu_priv_handle->ov_alpha_minfo[0].paddr + ipu_priv_handle->ov_alpha_off,
 						ipu_priv_handle->mode & OP_STREAM_MODE ?
 						ipu_priv_handle->ov_alpha_minfo[1].paddr + ipu_priv_handle->ov_alpha_off : 0,
-						0,
 						0, 0);
 				if (ret < 0) {
 					ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -1827,7 +1822,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 				output->rot,
 				buf0,
 				buf1,
-				0,
 				ipu_priv_handle->output.o_uoff, ipu_priv_handle->output.o_voff);
 		if (ret < 0) {
 			ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -1880,7 +1874,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 				ipu_priv_handle->i_minfo[0].paddr + ipu_priv_handle->i_off,
 				ipu_priv_handle->mode & OP_STREAM_MODE ?
 				ipu_priv_handle->i_minfo[1].paddr + ipu_priv_handle->i_off : 0,
-				0,
 				ipu_priv_handle->i_uoff, ipu_priv_handle->i_voff);
 		if (ret < 0) {
 			ipu_uninit_channel(ipu_priv_handle->output.rot_chan);
@@ -1904,7 +1897,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 				ipu_priv_handle->mode & OP_STREAM_MODE ?
 				ipu_priv_handle->output.o_minfo[1].paddr +
 				ipu_priv_handle->output.o_off : 0,
-				0,
 				ipu_priv_handle->output.o_uoff, ipu_priv_handle->output.o_voff);
 		if (ret < 0) {
 			ipu_uninit_channel(ipu_priv_handle->output.rot_chan);
@@ -2019,7 +2011,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 				IPU_ROTATE_NONE,
 				buf0,
 				buf1,
-				0,
 				ipu_priv_handle->i_uoff, ipu_priv_handle->i_voff);
 		if (ret < 0) {
 			ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -2037,7 +2028,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 					IPU_ROTATE_NONE,
 					buf0_p,
 					buf1_p,
-					0,
 					ipu_priv_handle->i_uoff, ipu_priv_handle->i_voff);
 			if (ret < 0) {
 				ipu_uninit_channel(ipu_priv_handle->output.vdi_ic_p_chan);
@@ -2053,7 +2043,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 					IPU_ROTATE_NONE,
 					buf0_n,
 					buf1_n,
-					0,
 					ipu_priv_handle->i_uoff, ipu_priv_handle->i_voff);
 			if (ret < 0) {
 				ipu_uninit_channel(ipu_priv_handle->output.vdi_ic_n_chan);
@@ -2072,7 +2061,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 					ipu_priv_handle->ov_minfo[0].paddr + ipu_priv_handle->ov_off,
 					ipu_priv_handle->mode & OP_STREAM_MODE ?
 					ipu_priv_handle->ov_minfo[1].paddr + ipu_priv_handle->ov_off : 0,
-					0,
 					ipu_priv_handle->ov_uoff, ipu_priv_handle->ov_voff);
 			if (ret < 0) {
 				ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -2090,7 +2078,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 						ipu_priv_handle->ov_alpha_minfo[0].paddr + ipu_priv_handle->ov_alpha_off,
 						ipu_priv_handle->mode & OP_STREAM_MODE ?
 						ipu_priv_handle->ov_alpha_minfo[1].paddr + ipu_priv_handle->ov_alpha_off : 0,
-						0,
 						0, 0);
 				if (ret < 0) {
 					ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -2109,7 +2096,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 				ipu_priv_handle->output.r_minfo[0].paddr,
 				ipu_priv_handle->mode & OP_STREAM_MODE ?
 				ipu_priv_handle->output.r_minfo[1].paddr : 0,
-				0,
 				0, 0);
 		if (ret < 0) {
 			ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -2132,7 +2118,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 				ipu_priv_handle->output.r_minfo[0].paddr,
 				ipu_priv_handle->mode & OP_STREAM_MODE ?
 				ipu_priv_handle->output.r_minfo[1].paddr : 0,
-				0,
 				0, 0);
 		if (ret < 0) {
 			ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
@@ -2157,7 +2142,6 @@ static int _ipu_channel_setup(ipu_lib_input_param_t * input,
 				ipu_priv_handle->mode & OP_STREAM_MODE ?
 				ipu_priv_handle->output.o_minfo[1].paddr +
 				ipu_priv_handle->output.o_off : 0,
-				0,
 				ipu_priv_handle->output.o_uoff, ipu_priv_handle->output.o_voff);
 		if (ret < 0) {
 			ipu_uninit_channel(ipu_priv_handle->output.ic_chan);
